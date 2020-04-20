@@ -1,0 +1,215 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/gui/PlanetInfo.gd" type="Script" id=1]
+[ext_resource path="res://assets/font-24.tres" type="DynamicFont" id=2]
+
+[node name="PlanetInfo" type="MarginContainer"]
+anchor_right = 0.167708
+anchor_bottom = 0.230556
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 322.0
+margin_bottom = 249.0
+color = Color( 1, 1, 1, 0.6 )
+
+[node name="Data" type="VBoxContainer" parent="."]
+margin_right = 322.0
+margin_bottom = 249.0
+
+[node name="Restart" type="HBoxContainer" parent="Data"]
+visible = false
+margin_right = 322.0
+margin_bottom = 20.0
+
+[node name="Option" type="OptionButton" parent="Data/Restart"]
+margin_right = 58.0
+margin_bottom = 20.0
+text = "TINY"
+items = [ "TINY", null, false, 0, null, "SMALL", null, false, 1, null, "MEDIUM", null, false, 2, null, "LARGE", null, false, 3, null ]
+selected = 0
+
+[node name="Button" type="Button" parent="Data/Restart"]
+margin_left = 62.0
+margin_right = 144.0
+margin_bottom = 20.0
+text = "New Game"
+
+[node name="Name" type="Label" parent="Data"]
+margin_right = 322.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "asdasd"
+align = 1
+
+[node name="StartPause" type="Button" parent="Data"]
+margin_top = 29.0
+margin_right = 322.0
+margin_bottom = 49.0
+text = "Start"
+
+[node name="Energy" type="HBoxContainer" parent="Data"]
+margin_top = 53.0
+margin_right = 322.0
+margin_bottom = 78.0
+
+[node name="Name" type="Label" parent="Data/Energy"]
+margin_right = 96.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Energy: "
+
+[node name="Value" type="Label" parent="Data/Energy"]
+margin_left = 100.0
+margin_right = 100.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Age" type="HBoxContainer" parent="Data"]
+margin_top = 82.0
+margin_right = 322.0
+margin_bottom = 107.0
+
+[node name="Name" type="Label" parent="Data/Age"]
+margin_right = 60.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Year:"
+
+[node name="Value" type="Label" parent="Data/Age"]
+margin_left = 64.0
+margin_right = 64.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Time" type="HBoxContainer" parent="Data"]
+margin_top = 111.0
+margin_right = 322.0
+margin_bottom = 136.0
+
+[node name="Name" type="Label" parent="Data/Time"]
+margin_right = 72.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Month:"
+
+[node name="Value" type="Label" parent="Data/Time"]
+margin_left = 76.0
+margin_right = 76.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Species" type="HBoxContainer" parent="Data"]
+margin_top = 140.0
+margin_right = 322.0
+margin_bottom = 165.0
+
+[node name="Name" type="Label" parent="Data/Species"]
+margin_right = 96.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Species:"
+
+[node name="Value" type="Label" parent="Data/Species"]
+margin_left = 100.0
+margin_right = 100.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Plants" type="HBoxContainer" parent="Data"]
+margin_top = 169.0
+margin_right = 322.0
+margin_bottom = 194.0
+
+[node name="Name" type="Label" parent="Data/Plants"]
+margin_right = 84.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Plants:"
+
+[node name="Value" type="Label" parent="Data/Plants"]
+margin_left = 88.0
+margin_right = 88.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Animals" type="HBoxContainer" parent="Data"]
+margin_top = 198.0
+margin_right = 322.0
+margin_bottom = 223.0
+
+[node name="Name" type="Label" parent="Data/Animals"]
+margin_right = 96.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Animals:"
+
+[node name="Value" type="Label" parent="Data/Animals"]
+margin_left = 100.0
+margin_right = 100.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Moves" type="HBoxContainer" parent="Data"]
+visible = false
+margin_top = 194.0
+margin_right = 322.0
+margin_bottom = 208.0
+
+[node name="Name" type="Label" parent="Data/Moves"]
+margin_right = 46.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Moves:"
+
+[node name="Value" type="Label" parent="Data/Moves"]
+margin_left = 50.0
+margin_right = 50.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Quit" type="Button" parent="Data"]
+margin_top = 227.0
+margin_right = 322.0
+margin_bottom = 247.0
+text = "Main Menu"
+
+[node name="Waiting" type="HBoxContainer" parent="Data"]
+visible = false
+margin_top = 214.0
+margin_right = 322.0
+margin_bottom = 238.0
+
+[node name="Name" type="Label" parent="Data/Waiting"]
+margin_top = 5.0
+margin_right = 52.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Waiting:"
+
+[node name="Value" type="CheckBox" parent="Data/Waiting"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+disabled = true
+[connection signal="pressed" from="Data/Restart/Button" to="." method="_on_Restart_Button_pressed"]
+[connection signal="pressed" from="Data/StartPause" to="." method="_on_StartPause_pressed"]
+[connection signal="pressed" from="Data/Quit" to="." method="_on_Quit_pressed"]

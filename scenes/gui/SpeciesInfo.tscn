@@ -1,0 +1,234 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/gui/SpeciesInfo.gd" type="Script" id=1]
+[ext_resource path="res://assets/font-24.tres" type="DynamicFont" id=2]
+
+[node name="SpeciesInfo" type="MarginContainer"]
+anchor_top = 0.646296
+anchor_right = 0.250521
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 481.0
+margin_bottom = 382.0
+color = Color( 1, 1, 1, 0.8 )
+
+[node name="Data" type="VBoxContainer" parent="BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="OptionButton" parent="BG/Data"]
+margin_right = 481.0
+margin_bottom = 20.0
+
+[node name="Name" type="HBoxContainer" parent="BG/Data"]
+margin_top = 24.0
+margin_right = 481.0
+margin_bottom = 49.0
+
+[node name="Label" type="Label" parent="BG/Data/Name"]
+margin_right = 60.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Name:"
+
+[node name="Value" type="Label" parent="BG/Data/Name"]
+margin_left = 64.0
+margin_right = 64.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Type" type="HBoxContainer" parent="BG/Data"]
+margin_top = 53.0
+margin_right = 481.0
+margin_bottom = 78.0
+
+[node name="Label" type="Label" parent="BG/Data/Type"]
+margin_right = 60.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Type:"
+
+[node name="Value" type="Label" parent="BG/Data/Type"]
+margin_left = 64.0
+margin_right = 64.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Amount" type="HBoxContainer" parent="BG/Data"]
+margin_top = 82.0
+margin_right = 481.0
+margin_bottom = 107.0
+
+[node name="Label" type="Label" parent="BG/Data/Amount"]
+margin_right = 84.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Amount:"
+
+[node name="Value" type="Label" parent="BG/Data/Amount"]
+margin_left = 88.0
+margin_right = 88.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Females" type="HBoxContainer" parent="BG/Data"]
+margin_top = 111.0
+margin_right = 481.0
+margin_bottom = 136.0
+
+[node name="Label" type="Label" parent="BG/Data/Females"]
+margin_right = 96.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Females:"
+
+[node name="Value" type="Label" parent="BG/Data/Females"]
+margin_left = 100.0
+margin_right = 100.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Males" type="HBoxContainer" parent="BG/Data"]
+margin_top = 140.0
+margin_right = 481.0
+margin_bottom = 165.0
+
+[node name="Label" type="Label" parent="BG/Data/Males"]
+margin_right = 72.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Males:"
+
+[node name="Value" type="Label" parent="BG/Data/Males"]
+margin_left = 76.0
+margin_right = 76.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Eats" type="HBoxContainer" parent="BG/Data"]
+margin_top = 169.0
+margin_right = 481.0
+margin_bottom = 194.0
+
+[node name="Label" type="Label" parent="BG/Data/Eats"]
+margin_right = 60.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Eats:"
+
+[node name="Value" type="Label" parent="BG/Data/Eats"]
+margin_left = 64.0
+margin_right = 64.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Lifespan" type="HBoxContainer" parent="BG/Data"]
+margin_top = 198.0
+margin_right = 481.0
+margin_bottom = 223.0
+
+[node name="Label" type="Label" parent="BG/Data/Lifespan"]
+margin_right = 276.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Avg. Lifespan (months):"
+
+[node name="Value" type="Label" parent="BG/Data/Lifespan"]
+margin_left = 280.0
+margin_right = 280.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="HP" type="HBoxContainer" parent="BG/Data"]
+margin_top = 227.0
+margin_right = 481.0
+margin_bottom = 252.0
+
+[node name="Label" type="Label" parent="BG/Data/HP"]
+margin_right = 144.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Avg. Health:"
+
+[node name="Value" type="Label" parent="BG/Data/HP"]
+margin_left = 148.0
+margin_right = 148.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Size" type="HBoxContainer" parent="BG/Data"]
+margin_top = 256.0
+margin_right = 481.0
+margin_bottom = 281.0
+
+[node name="Label" type="Label" parent="BG/Data/Size"]
+margin_right = 60.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Size:"
+
+[node name="Value" type="Label" parent="BG/Data/Size"]
+margin_left = 64.0
+margin_right = 64.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Fertility" type="HBoxContainer" parent="BG/Data"]
+margin_top = 285.0
+margin_right = 481.0
+margin_bottom = 310.0
+
+[node name="Label" type="Label" parent="BG/Data/Fertility"]
+margin_right = 180.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fertility Rate:"
+
+[node name="Value" type="Label" parent="BG/Data/Fertility"]
+margin_left = 184.0
+margin_right = 184.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="KillAll" type="Button" parent="BG/Data"]
+margin_top = 314.0
+margin_right = 481.0
+margin_bottom = 334.0
+text = "Remove Specie (cost: 50 energy / creature)"
+
+[node name="Reroll" type="Button" parent="BG/Data"]
+margin_top = 338.0
+margin_right = 481.0
+margin_bottom = 358.0
+text = "Reroll (get another random specie, cost: 200 energy)"
+[connection signal="item_selected" from="BG/Data/Select" to="." method="_on_Select_item_selected"]
+[connection signal="pressed" from="BG/Data/KillAll" to="." method="_on_KillAll_pressed"]
+[connection signal="pressed" from="BG/Data/Reroll" to="." method="_on_Reroll_pressed"]

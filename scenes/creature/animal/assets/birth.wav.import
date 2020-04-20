@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/birth.wav-5d11f398034b828227b0f24d96478692.sample"
+
+[deps]
+
+source_file="res://scenes/creature/animal/assets/birth.wav"
+dest_files=[ "res://.import/birth.wav-5d11f398034b828227b0f24d96478692.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

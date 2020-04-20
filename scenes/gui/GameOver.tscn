@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/gui/GameOver.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/font.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 130
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/font.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://assets/font.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://assets/font.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+font_data = SubResource( 7 )
+
+[node name="GameOver" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 0.8 )
+
+[node name="Center" type="MarginContainer" parent="BG"]
+anchor_top = 0.357407
+anchor_right = 1.0
+anchor_bottom = 0.642593
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Data" type="VBoxContainer" parent="BG/Center"]
+margin_right = 1920.0
+margin_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sign" type="Label" parent="BG/Center/Data"]
+margin_right = 1920.0
+margin_bottom = 131.0
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Game Over!"
+align = 1
+
+[node name="Why" type="Label" parent="BG/Center/Data"]
+margin_top = 135.0
+margin_right = 1920.0
+margin_bottom = 176.0
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Your planet died!"
+align = 1
+
+[node name="Score" type="Label" parent="BG/Center/Data"]
+margin_top = 180.0
+margin_right = 1920.0
+margin_bottom = 211.0
+custom_fonts/font = SubResource( 6 )
+text = "Your score:"
+align = 1
+
+[node name="HighScore" type="Label" parent="BG/Center/Data"]
+margin_top = 215.0
+margin_right = 1920.0
+margin_bottom = 236.0
+custom_fonts/font = SubResource( 8 )
+text = "High score:"
+align = 1
+
+[node name="Restart" type="Button" parent="BG/Center/Data"]
+margin_top = 240.0
+margin_right = 1920.0
+margin_bottom = 260.0
+text = "Start a new game"
+
+[node name="More" type="Button" parent="BG/Center/Data"]
+margin_top = 264.0
+margin_right = 1920.0
+margin_bottom = 284.0
+text = "Continue on this planet"
+
+[node name="Quit" type="Button" parent="BG/Center/Data"]
+margin_top = 288.0
+margin_right = 1920.0
+margin_bottom = 308.0
+text = "Quit"
+[connection signal="pressed" from="BG/Center/Data/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="BG/Center/Data/More" to="." method="_on_More_pressed"]
+[connection signal="pressed" from="BG/Center/Data/Quit" to="." method="_on_Quit_pressed"]
